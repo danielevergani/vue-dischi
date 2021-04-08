@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
         <!-- development version, includes helpful console warnings -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
@@ -25,7 +28,6 @@
                         <select v-model="genreSelected" name="genere" id="genere">
                             <option  v-for="genere in genre" :value="genere"> {{genere}} </option>
                         </select>
-                        <button>go!</button>
                     </div>
                     
                     <!--end selezione genere -->
@@ -34,7 +36,7 @@
                         <div v-for="album in albums" v-show="album.genre == genreSelected || genreSelected == 'All'" class="single_album">
                             <img :src="album.poster" alt="">
                             <h3 class="title">{{album.title}}</h3>
-                            <p>{{album.author}}</p>
+                            <p class="author">{{album.author}}</p>
                             <p>{{album.year}}</p>
                         </div>
                     </div>

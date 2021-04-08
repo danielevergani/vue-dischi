@@ -11,6 +11,7 @@ var app = new Vue ({
             .then(( results ) => {
                 this.albums = results.data.response;
                 this.selectConstructor();
+                this.ordina();
             });
         },
 
@@ -20,9 +21,13 @@ var app = new Vue ({
                     this.genre.push(elemento.genre);
                 }
             });
-            console.log(this.genre);
         },
 
+        ordina: function(){
+            this.albums.sort((a, b) => {
+                return a.year - b.year;
+            });
+        }
     },
 
     mounted: function(){
