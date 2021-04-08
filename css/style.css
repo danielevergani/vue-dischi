@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    background-color: pink;
+}
+
+.album__section{
+    display: flex;
+}
+
+.single_album{
+    width: 20%;
+    background-color: rgba(232, 236, 241, 0.5);
+    text-align: center;
+}
+
+.single_album img{
+    width: 80%;
+    padding-top: 20px;
+}
+
+.single_album p:last-child{
+    padding-bottom: 20px;
+}
+
