@@ -20,14 +20,18 @@
                 </header>
                 <main>
                     <!-- selezione genere -->
-                    <label for="genere">Scegli il tuo genere preferito</label>
-                    <select name="genere" id="genere">
-                        <option value=""></option>
-                    </select>
+                    <div class="genre__selection">
+                        <label for="genere">Scegli il tuo genere preferito</label>
+                        <select v-model="genreSelected" name="genere" id="genere">
+                            <option  v-for="genere in genre" :value="genere"> {{genere}} </option>
+                        </select>
+                        <button>go!</button>
+                    </div>
+                    
                     <!--end selezione genere -->
 
                     <div class="album__section">
-                        <div v-for="album in albums"class="single_album">
+                        <div v-for="album in albums" v-show="album.genre == genreSelected || genreSelected == 'All'" class="single_album">
                             <img :src="album.poster" alt="">
                             <h3 class="title">{{album.title}}</h3>
                             <p>{{album.author}}</p>

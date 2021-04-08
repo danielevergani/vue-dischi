@@ -20,6 +20,12 @@
     height: 60px;
 }
 
+.genre__selection{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
 .album__section{
     display: flex;
     flex-wrap: wrap;
