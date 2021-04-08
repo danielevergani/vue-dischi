@@ -14,19 +14,19 @@
         <div id="app">
             <div class="container">
                 <header>
-
+                    <div class="logo__section">
+                        <img src="img/download.png" alt="logo">
+                    </div>
                 </header>
                 <main>
+                    <label for="genere">Scegli il tuo genere preferito</label>
+                    <select name="genere" id="genere">
+                        <option value=""></option>
+                      </select>
                     <div class="album__section">
                         <div v-for="album in albums"class="single_album">
                             <img :src="album.poster" alt="">
-                            <h3>{{album.title}}</h3>
-                            <p>{{album.author}}</p>
-                            <p>{{album.year}}</p>
-                        </div>
-                        <div v-for="album in albums"class="single_album">
-                            <img :src="album.poster" alt="">
-                            <h3>{{album.title}}</h3>
+                            <h3 class="title">{{album.title}}</h3>
                             <p>{{album.author}}</p>
                             <p>{{album.year}}</p>
                         </div>
