@@ -19,10 +19,13 @@
                     </div>
                 </header>
                 <main>
+                    <!-- selezione genere -->
                     <label for="genere">Scegli il tuo genere preferito</label>
                     <select name="genere" id="genere">
                         <option value=""></option>
-                      </select>
+                    </select>
+                    <!--end selezione genere -->
+
                     <div class="album__section">
                         <div v-for="album in albums"class="single_album">
                             <img :src="album.poster" alt="">
